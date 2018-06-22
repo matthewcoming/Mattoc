@@ -16,7 +16,8 @@ class Car(object):
 
     """starts the car"""
     def start(self):
-        sys.stdout.write("starting engine")
+        sys.stdout.write("Starting engine")
         for i in range(2):
             time.sleep(.500)
             sys.stdout.write(".")
+        print("Engine started")
