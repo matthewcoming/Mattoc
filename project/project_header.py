@@ -1,23 +1,24 @@
 #Matthew Coming test project to learn git-flow
+import time
 import sys
-
 """making a car"""
-class Car(object):
-
+class Car:
     """initializing the car object"""
-    def _init_(self, company, engine, interior, transmission, color):
+    def __init__(self, company, engine, interior, transmission, color):
         self.company = company
         self.engine = engine
         self.interior = interior
         self.transmission = transmission
         self.color = color
+        self.state = 0
 
     """---class methods---"""
 
     """starts the car"""
-    def start(self):
-        sys.stdout.write("Starting engine")
-        for i in range(2):
-            time.sleep(.500)
-            sys.stdout.write(".")
+    def start(self): 
+        if self.state == 1:
+            print("Car is already on")
+            return
+        input("Press enter to start the engine.")
         print("Engine started")
+        self.state = 1
