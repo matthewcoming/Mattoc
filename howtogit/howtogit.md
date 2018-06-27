@@ -5,7 +5,7 @@
 [comment]: # "This is a highly portable, invisible comment in markdown"
 
 Table of contents
-* [Creating a repo](#creatingarepo)
+* [Creating a repo](#creating-a-repo)
 * [Creating a remote repo](#creatingaremoterepo)
 * [Staging changes](#stagingchanges)
 * [Commiting changes](#commitingchanges)
@@ -27,7 +27,7 @@ Table of contents
 
 [logo]: http://www.geo.uzh.ch/microsite/reproducible_research/post/rr-eclipse-git/img/git-transport.png "Git Movement"
 <a name="creatingarepo">
-#### Creating a Repo
+#### Creating a repo
 </a>
 
 1. Go to your desired path 
