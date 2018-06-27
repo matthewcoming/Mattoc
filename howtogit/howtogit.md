@@ -13,13 +13,13 @@ Table of contents
 * [Tracking branches](#trackingbranches)
 * [Merging a branch](#mergingabranch)
 * [Rebasing a branch](#rebasingabranch)
+* [Reseting](#reseting)
+* [Reverting](#reverting)
+* [Fixing bad merging](#fixingbadmerging)
 * [Stashing changes](#stashingchanges)
 * [.gitignore](#gitignore)
 * [Fix untracked files after .gitignore](#fixuntrackedfiles)
 * [Bare repo and its purpose](#barerepoanditspurpose)
-* [](#)
-* [](#)
-* [](#)
 * [](#)
 * [](#)
 
@@ -44,15 +44,16 @@ Initialized empty Git repository in home/here/be/dragons/.git/
 ```
 
 <a name="creatingaremoterepo">
-### Creating a remote repo
+#### Creating a remote repo
 </a>
 
 After `git init`, use the command `git remote add [remoteName] [url]`
 ```Bash
-$ git remote add origin https://github.com/matthewcoming/mattoc
+$ git remote add origin 
+https://github.com/kingarthur/england
 $ git remote --verbose
-origin	https://github.com/matthewcoming/mattoc.git (fetch)
-origin	https://github.com/matthewcoming/mattoc.git (push)
+origin	https://github.com/kingarthur/england.git (fetch)
+origin	https://github.com/kingarthur/england (push)
 ```
 
 <a name="stagingchanges">
@@ -103,6 +104,55 @@ $ git checkout --track origin/develop
 #### Merging a Branch
 </a>
 
+<a name="fixingbadmerging">
+#### Fixing bad merging
+</a>
+
+##### Accidental merging onto master
+
+This is a very simple issue to fix as long as you havent made any new commits yet. Your current repo looks something like this:
+
+```
+develop   B --  C  --  D
+         /             *\* 
+master  A -- A1 -- A2 -- E
+```
+Where the asterix mark the accidental merge commit. In order to fix this issue, simply use `git reset --hard HEAD~`. Your git history will revert, and looks like this.
+
+```
+develop   B -- C -- D
+         /              
+master  A -- A1 -- A2 
+```
+
+
+##### Commiting master after merging
+
+Let's say you made some changes in a `feature` branch, merged them into your `develop` branch "G", and then after a few bug fixes in the `develop` branch, you merged it into `master` "H". Noticing a typo here or there in that final merge, you make your changes in `master` and create a third commit "I". When you return to your `develop` or `feature` branches, you might be suprised to see your typo fixes aren't there.
+
+```
+feature          D -- E -- F
+                /           \
+develop   B -- C --- --- --- G
+         /                    \
+master  A --- --- --- --- ---  H -- I
+```
+###### The misleading portion of this diagram is the notion that both of our branches  exist on a level that is either somehow above or apart from master. Git stores changes as a tree. When we merge the tree(branch) into master, it ties into it.
+
+With your new found `git merge` powers, you attempt to send your changes "upstream" to your branches(the mistake/idea being that branches are divergent from HEAD at all times and thereore upstream) with the command `git merge master develop`. Alas, git is stubborn and tells you `Already up-to-date`.
+
+As the diagram shows, `feature` and `develop` are in the same state "H" they were before your typo fixing commit "I". Also, both of these branches are now *parents* of `master`. The branches are up-to-date with master because all previous changes made in the branches are present in master.
+
+Okay, so we understand the problem. In order to unfuck your git repo, your best option is to use `git rebase master` on your `develop` or `feature` branch. This will destroy your formal git history, and is unadvised when working in a team, but so is merging all your branches onto master and then editing on master.
+
+```Bash
+$ git checkout develop
+witched to branch 'develop'
+$git rebase master
+First, rewinding head to replay your work on top of it...
+Fast-forwarded develop to master.
+```
+
 <a name="rebasingabranch">
 #### Rebasing a branch
 </a>
@@ -141,7 +191,7 @@ $ cd top/repo/dir
 $ git rm -r --cached .
 rm 'swordinthestone.py'
 $git add .
-$git commit -m "hotfix to support  upstream changes made by ladyofthelake"
+$git commit -m "hotfix to support upstream changes made by ladyofthelake"
 ```
 
 <a name="">
