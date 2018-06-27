@@ -6,27 +6,27 @@
 
 Table of contents
 * [Creating a repo](#creating-a-repo)
-* [Creating a remote repo](#creatingaremoterepo)
-* [Staging changes](#stagingchanges)
-* [Commiting changes](#commitingchanges)
-* [Creating a branch](#creatingabranch)
-* [Tracking branches](#trackingbranches)
-* [Merging a branch](#mergingabranch)
-* [Rebasing a branch](#rebasingabranch)
+* [Creating a remote repo](#creating-a-remote-repo)
+* [Staging changes](#staging-changes)
+* [Commiting changes](#commiting-changes)
+* [Creating a branch](#creating-a-branch)
+* [Tracking branches](#tracking-branches)
+* [Merging a branch](#merging-a-branch)
+* [Rebasing a branch](#rebasing-a-branch)
 * [Reseting](#reseting)
 * [Reverting](#reverting)
-* [Fixing bad merging](#fixingbadmerging)
-* [Stashing changes](#stashingchanges)
-* [.gitignore](#gitignore)
-* [Fix untracked files after .gitignore](#fixuntrackedfiles)
-* [Bare repo and its purpose](#barerepoanditspurpose)
+* [Fixing bad merging](#fixing-bad-merging)
+* [Stashing changes](#stashing-changes)
+* [.gitignore](#.gitignore)
+* [Fix untracked files after .gitignore](#fix-untracked-files-after-.gitignore)
+* [Bare repo and its purpose](#bare-repo-and-its-purpose)
 * [](#)
 * [](#)
 
 ![Something went wrong, this should be a picture!][logo]
 
 [logo]: http://www.geo.uzh.ch/microsite/reproducible_research/post/rr-eclipse-git/img/git-transport.png "Git Movement"
-<a name="creatingarepo">
+<a name="creating-a-repo">
 #### Creating a repo
 </a>
 
@@ -43,7 +43,7 @@ $ git init
 Initialized empty Git repository in home/here/be/dragons/.git/
 ```
 
-<a name="creatingaremoterepo">
+<a name="creating-a-remote-repo">
 #### Creating a remote repo
 </a>
 
@@ -56,7 +56,7 @@ origin	https://github.com/kingarthur/england.git (fetch)
 origin	https://github.com/kingarthur/england (push)
 ```
 
-<a name="stagingchanges">
+<a name="staging-changes">
 #### Staging changes 
 </a>
 
@@ -67,7 +67,7 @@ $ git rm excalibur.stone
 rm 'excalibur.stone'
 ```
 
-<a name="commitingchanges">
+<a name="commiting-changes">
 #### Commiting changes
 </a>
 
@@ -81,11 +81,11 @@ $ git commit -m"removed excalibur"
 
 ```
 
-<a name="creatingabranch">
+<a name="creating-a-branch">
 #### Creating a branch
 </a>
 
-<a name="trackingbranches">
+<a name="tracking-branches">
 #### Tracking branches
 </a>
 
@@ -100,11 +100,25 @@ If you would like to
 $ git checkout --track origin/develop
 ```
 
-<a name="mergingabranch">
+<a name="merging-a-branch">
 #### Merging a Branch
 </a>
 
-<a name="fixingbadmerging">
+
+<a name="rebasing-a-branch">
+#### Rebasing a branch
+</a>
+
+<a name="reseting">
+#### Reseting
+</a>
+
+<a name="reverting">
+#### Reverting
+</a>
+
+
+<a name="fixing-bad-merging">
 #### Fixing bad merging
 </a>
 
@@ -153,16 +167,16 @@ First, rewinding head to replay your work on top of it...
 Fast-forwarded develop to master.
 ```
 
-<a name="rebasingabranch">
+<a name="rebasing-a-branch">
 #### Rebasing a branch
 </a>
 
-<a name="stashingchanges">
+<a name="stashing-changes">
 #### Stashing changes
 </a>
 
 
-<a name="gitignore">
+<a name=".gitignore">
 #### .gitignore
 </a>
 
@@ -179,7 +193,7 @@ $ cd
 $ echo "irish/legend" > .gitignore_global
 ```
 
-<a name="fixuntrackedfiles">
+<a name="fix-untracked-files-after-.gitignore">
 #### Fix untracked files after .gitignore
 </a>
 Now that your .gitignore is set up just as described, you might wonder why the files you intended to ignore of are still showing as untracked. This is due to how git invokes the rules specified in your .gitignore, which happens either when you run `git init` or a new file that falls under the .gitignore rules is created.
@@ -198,7 +212,7 @@ $git commit -m "hotfix to support upstream changes made by ladyofthelake"
 ####
 </a>
 
-<a name="barerepoanditspurpose">
+<a name="bare-repo-and-its-purpose">
 #### Bare repo and its purpose
 </a>
 
