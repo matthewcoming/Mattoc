@@ -1,5 +1,3 @@
-*not currrently github-flavored-mdown-friendly*
-
 # Git-flow
 
 [comment]: # "This is a highly portable, invisible comment in markdown"
@@ -94,6 +92,19 @@ $ git commit -m"removed excalibur"
 #### Creating a branch
 </a>
 
+
+```Bash
+$ git branch sidequest
+$ git checkout sidequest
+Switched to branch 'sidequest'
+```
+
+Condensed to a one liner:
+```Bash
+$ git checkout -b sidequest
+Switched to a new branch 'sidequest'
+```
+
 <a name="tracking-branches">
 
 #### Tracking branches
@@ -115,6 +126,19 @@ $ git checkout --track origin/develop
 #### Merging a Branch
 </a>
 
+Merging is the proccess of taking all of the changes made in one branch, and **merging** them into the changes of another branch(this is not to say the other branch has diverged or changed since their fork. It is to say, however, that a git commit is just record of changes since the previous commit). You will want to `commit` your changes in your `development` branch, `checkout` the branch that will be recieve the changes from `development` (usually `master`), and `merge development`.
+
+```Bash
+(branch +%)$ git commit -m"Merlins prophecy"
+[develop c0870d6] Merlins prophecy
+ 1 file changed, 20 insertions(+), 1 deletion(-)
+(branch %)$ git checkout master
+(master %)$ git merge branch
+Updating c0870d6..36240e8
+Fast-forward
+ kingarthur/merlinsquest.py | 21 ++++++++++++++++++++-
+ 1 file changed, 20 insertions(+), 1 deletion(-)
+```
 
 <a name="rebasing-a-branch">
 
