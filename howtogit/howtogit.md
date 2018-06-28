@@ -29,13 +29,11 @@ Table of contents
  #### Creating a repo
 </a>
 
-1. Go to your desired path 
-
+Go to your desired path,
 ```Bash
 $ cd ~/here/be/dragons
 ```
-
-2. Create a repository using the command `git init`
+and create a repository using the command `git initi`
 
 ```Bash
 $ git init
@@ -55,11 +53,6 @@ $ git remote --verbose
 origin	https://github.com/kingarthur/england.git (fetch)
 origin	https://github.com/kingarthur/england (push)
 ```
-<a name="creating-a-repo">
-
-#### Creating a repo
-</a>
-
 <a name="staging-changes">
 
 #### Staging changes 
@@ -145,6 +138,16 @@ Fast-forward
 #### Rebasing a branch
 </a>
 
+`git rebase [branch]` will take the curently checked out branch and move its origin or "base" to the beginning of [branch].
+
+Rebasing is dangerous. It can act destructively, and by virture of how it works, will complete re-write the repo history. When should you do it? Only if you are the only one to ever work on, or ever even know of this projects existence.
+
+```Bash
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Fast-forwarded develop to master.
+```
+
 <a name="reseting">
 
 #### Reseting
@@ -197,7 +200,15 @@ With your new found `git merge` powers, you attempt to send your changes "upstre
 
 As the diagram shows, `feature` and `develop` are in the same state "H" they were before your typo fixing commit "I". Also, both of these branches are now *parents* of `master`. The branches are up-to-date with master because all previous changes made in the branches are present in master.
 
-Okay, so we understand the problem. In order to unfuck your git repo, your best option is to use `git rebase master` on your `develop` or `feature` branch. This will destroy your formal git history, and is unadvised when working in a team, but so is merging all your branches onto master and then editing on master.
+Okay, so we understand the problem. In order to unfuck your git repo, your best option is to either:
+
+1. `git fetch master`
+
+2. `git branch -d develop`
+
+3. `git rebase master`
+
+`git rebase master` on your `develop` or `feature` branch. This will destroy your formal git history, and is unadvised when working in a team, but so is merging all your branches onto master and then editing on master.
 
 ```Bash
 $ git checkout develop
