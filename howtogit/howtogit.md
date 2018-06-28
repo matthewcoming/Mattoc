@@ -27,7 +27,8 @@ Table of contents
 
 [logo]: http://www.geo.uzh.ch/microsite/reproducible_research/post/rr-eclipse-git/img/git-transport.png "Git Movement"
 <a name="creating-a-repo">
-#### Creating a repo
+ 
+ #### Creating a repo
 </a>
 
 1. Go to your desired path 
@@ -44,6 +45,7 @@ Initialized empty Git repository in home/here/be/dragons/.git/
 ```
 
 <a name="creating-a-remote-repo">
+
 #### Creating a remote repo
 </a>
 
@@ -56,10 +58,12 @@ origin	https://github.com/kingarthur/england.git (fetch)
 origin	https://github.com/kingarthur/england (push)
 ```
 <a name="creating-a-repo">
+
 #### Creating a repo
 </a>
 
 <a name="staging-changes">
+
 #### Staging changes 
 </a>
 
@@ -71,6 +75,7 @@ rm 'excalibur.stone'
 ```
 
 <a name="commiting-changes">
+
 #### Commiting changes
 </a>
 
@@ -85,10 +90,12 @@ $ git commit -m"removed excalibur"
 ```
 
 <a name="creating-a-branch">
+
 #### Creating a branch
 </a>
 
 <a name="tracking-branches">
+
 #### Tracking branches
 </a>
 
@@ -104,25 +111,30 @@ $ git checkout --track origin/develop
 ```
 
 <a name="merging-a-branch">
+
 #### Merging a Branch
 </a>
 
 
 <a name="rebasing-a-branch">
+
 #### Rebasing a branch
 </a>
 
 <a name="reseting">
+
 #### Reseting
 </a>
 
 
 <a name="reverting">
+
 #### Reverting
 </a>
 
 
 <a name="fixing-bad-merging">
+
 #### Fixing bad merging
 </a>
 
@@ -172,15 +184,18 @@ Fast-forwarded develop to master.
 ```
 
 <a name="rebasing-a-branch">
+
 #### Rebasing a branch
 </a>
 
 <a name="stashing-changes">
+
 #### Stashing changes
 </a>
 
 
 <a name=".gitignore">
+
 #### .gitignore
 </a>
 
@@ -198,6 +213,7 @@ $ echo "irish/legend" > .gitignore_global
 ```
 
 <a name="fix-untracked-files-after-.gitignore">
+
 #### Fix untracked files after .gitignore
 </a>
 Now that your .gitignore is set up just as described, you might wonder why the files you intended to ignore of are still showing as untracked. This is due to how git invokes the rules specified in your .gitignore, which happens either when you run `git init` or a new file that falls under the .gitignore rules is created.
@@ -213,14 +229,17 @@ $git commit -m "hotfix to support upstream changes made by ladyofthelake"
 ```
 
 <a name="">
+
 ####
 </a>
 
 <a name="bare-repo-and-its-purpose">
+
 #### Bare repo and its purpose
 </a>
 
 Bare repos are special and can be created 
 <a name="">
+
 #### 
 </a>
