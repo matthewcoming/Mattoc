@@ -202,11 +202,28 @@ As the diagram shows, `feature` and `develop` are in the same state "H" they wer
 
 Okay, so we understand the problem. In order to unfuck your git repo, your best option is to either:
 
-1. `git fetch master`
+If 
+1. Reseting HEAD, checkingout develop, and commiting
 
-2. `git branch -d develop`
+```BASH
+$ git reset --soft HEAD^
+$ git checkout develop
+$ git commit -m"message"
+```
+
+2. deleting and recreating the branch
+
+
+You've merged this branch back into master. If you're working alone, then your git history isn't all that important, so deleting the branch and recreating it in master will put your most recent changes into the new develop.
+
+```Bash
+$ git branch -d develop
+$ git checkout -b develop
+```
 
 3. `git rebase master`
+
+If you can avoid this, avoid it.
 
 `git rebase master` on your `develop` or `feature` branch. This will destroy your formal git history, and is unadvised when working in a team, but so is merging all your branches onto master and then editing on master.
 
