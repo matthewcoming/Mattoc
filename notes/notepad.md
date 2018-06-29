@@ -19,3 +19,5 @@ Strangers are the best outlet, but most strangers dont think so too.
 A students work for C students, and neither mind.
 
 The best way to learn something is to be wrong, multiple times.
+
+We don't get very many asteroids these days.
