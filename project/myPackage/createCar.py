@@ -33,27 +33,56 @@ class Car:
         self.interior = interior
         self.transmission = transmission
         self.color = color
-        self.state = 0
+        self.engineRunning = 0
 
+    def getCompany(self):
+        """Return the manufactuer name.
+        """
+        return self.company
+
+    def getEngine(self):
+        """Return the type of engine.
+        """
+        return self.engine
+
+    def getTransmission(self):
+        """Return the type of transmission
+        """
+        return self.transmission
+
+    def getColor(self):
+        """Return color.
+        """
+        return self.color
+
+    def getEngineRunning(self):
+        """Return state of engine.
+        """
+        return self.engineRunning
+    
+    def getInterior(self):
+        """Return interior spec.
+        """
+        return self.interior
     def start(self):
         """Start the car.
 
-        car.start() first evaluates if the bool variable `state` is true. If
+        car.start() first evaluates if the bool variable `engineRunning` is true. If
         true, print a warning and return. If false, request user input and
         display that the car has started.
 
         """
-        if self.state == 1:
+        if self.engineRunning == 1:
             print("Car is already on")
             return
         input("Press enter to start the engine.")
         print("Engine started")
-        self.state = 1
+        self.engineRunning = 1
 
     def stop(self):
-        if self.state == 0:
+        if self.engineRunning == 0:
             print("Car is already on")
             return
         input("Press enter to stop the engine")
         print("Engine stopped")
-        self.state = 0
+        self.engineRunning = 0
