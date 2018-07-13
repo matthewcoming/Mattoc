@@ -1,0 +1,5 @@
+Pre-install dconf-cli
+$ sudo apt-get install dconf-cli
+
+Command to choose theme
+$ wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh
