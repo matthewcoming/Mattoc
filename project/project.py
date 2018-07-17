@@ -1,4 +1,4 @@
-from myPackage import createCar
+from myModule import createCar
 
 
 Focus = createCar.Car("Ford", "i4", "Recaro", "manual", "Black")
