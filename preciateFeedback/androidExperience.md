@@ -21,6 +21,13 @@
 [searchSendRecognition.jpg]: https://raw.githubusercontent.com/matthewcoming/Mattoc/develop/preciateFeedback/androidSmsScreenshots/searchSendRecognition.jpg
 [smsProfileLink.jpg]: https://raw.githubusercontent.com/matthewcoming/Mattoc/develop/preciateFeedback/androidSmsScreenshots/smsProfileLink.jpg
 [userSupportPage.jpg]: https://raw.githubusercontent.com/matthewcoming/Mattoc/develop/preciateFeedback/androidSmsScreenshots/userSupportPage.jpg
+[acceptTotallyAwesome.jpg]: https://raw.githubusercontent.com/matthewcoming/Mattoc/develop/preciateFeedback/androidSmsScreenshots/acceptTotallyAwesome.jpg
+[declineGoingTheDistance.jpg]: https://raw.githubusercontent.com/matthewcoming/Mattoc/develop/preciateFeedback/androidSmsScreenshots/declineGoingTheDistance.jpg
+[profileAchievementNew.jpg]: https://raw.githubusercontent.com/matthewcoming/Mattoc/develop/preciateFeedback/androidSmsScreenshots/profileAchievementNew.jpg
+[profileRecognitionNew.jpg]: https://raw.githubusercontent.com/matthewcoming/Mattoc/develop/preciateFeedback/androidSmsScreenshots/profileRecognitionNew.jpg
+[totallyAwesome.jpg]: https://raw.githubusercontent.com/matthewcoming/Mattoc/develop/preciateFeedback/androidSmsScreenshots/totallyAwesome.jpg
+
+
 
 # Preciate SMS & Android Experience
 ---
@@ -32,7 +39,8 @@
 
 * The initial message might read better as "Hi there. Mike Coming recognized you for **being** "Always On Target" **with** Preciate."
     * **'being'** is gramatically needed as the verb, but would not be included for messages such as "Leading the charge" and "Guiding the way".<br><br> Given that this is the first impression a user has with Preciate, the broken sentence fragment ...recognized you for "Always On Target" on Preciate... might confuse them.
-    * **'with'** implies that Preciate is more of a tool to use, rather than a place to be.
+<br>
+* **'with'** implies that Preciate is more of a tool to use, rather than a place to be.
 
 * The next messages states that the user should use the Preciate app to send recognition, but non-iOS users must use the browser to send recognition.
     * This is not clear, though, for any android user who doesn't search through the website.
@@ -43,5 +51,43 @@
 
 | ![failed url][fineSonRecog.jpg] | ![failed url][acceptFineSonRecog.jpg]
 | :---: | :---:
-|Mike recognizes an android user <br> with the message "Matthew is a fine <br> son". The user has the ability to accept<br> this message. | The user sends 'yes' and receives <br> a confirmation response.
+|Mike recognizes an android user <br> with the message "Matthew is a fine <br> son". The user has the ability to accept<br> this message. | The user accepts.
 
+<br>
+
+| ![failed url][crazyWaysRecog.jpg] | ![failed url][declineCrazyWays.jpg]
+| :---: | :---:
+| Mike recognizes the user.| The user declines. 
+
+<br>
+
+| ![failed url][helpSms.jpg]
+| :---:
+| The user sends 'Help' and recieves <br> information on how to unsubscribe.
+
+* Although ugly, it might be required by the US E-SIGN act, Telephone Consumer Protection Act(TCPA), and the Cellular Telephone Industries Association(CTIA) that this message only appear on a specific user input.
+
+<br>
+
+| ![failed url][smsProfileLink.jpg]<br>(cropped for privacy) | ![failed url][myProfile.jpg]
+| :---: | :---:
+| Mike sends the user a link to <br>the users profile.| User clicks the link. 
+
+* The user has no apparent way of accessing their profile through the website.
+* The user does not know that a public profile was created on initial recognition. A link to their profile would help.
+* Mike linked a phone number to the Name 'Matthew Coming' and created this profile. How could an android user take control of the account other than emailing for its deletion?
+
+<br>
+
+| ![failed url][totallyAwesome.jpg] | ![failed url][]
+| :---: | :---:
+| | 
+
+
+| ![failed url][] | ![failed url][]
+| :---: | :---:
+| | 
+
+| ![failed url][] | ![failed url][]
+| :---: | :---:
+| | 
