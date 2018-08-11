@@ -3,6 +3,9 @@
 My journey from *lack-luster* idiot, to *shiny* sophomore.
 
 ---
+
+// TODO remove for employers 
+
 ### Now this is a story
 all about how
 
@@ -14,7 +17,7 @@ all about how
 Matt@Ubuntu:~like\to\take\a (minute %)$Just --sit right-there
 ```
 
-I'll tell you how 
-* I became the prince 
-* of a town called 
+I'll tell you how
+* I became the prince
+* of a town called
 * Bel-Air.
