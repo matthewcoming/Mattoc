@@ -1,0 +1,3 @@
+Use this line to alter the test scaling in ubuntu 18.04
+
+gsettings set org.gnome.desktop.interface text-scaling-factor 1.2

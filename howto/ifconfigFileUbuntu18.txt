@@ -1,0 +1,9 @@
+during vmware-tools install in Ubuntu 18.04 LTS you might run into a loop where it will prompt you to give the location of your ifconfig file.
+
+in order to find the location of it, do the following:
+
+$ sudo apt install mlocate
+$ sudo updatedb
+$ sudo mlocate ifconfig
+
+output should look like usr/src/linux-headers-x.xx.x-xx/tools/hv/hv_set_ifconfig.sh 
