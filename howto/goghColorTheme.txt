@@ -3,3 +3,5 @@ $ sudo apt-get install dconf-cli
 
 Command to choose theme
 $ wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh
+
+If you are in Ubuntu 18, you must click terminal on the top information bar of the screen, select preferences, then click on your profile, then the colors tab, and uncheck "Use clors from system theme"
