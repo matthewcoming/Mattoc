@@ -22,7 +22,7 @@ Table of contents
 
 [logo]: http://www.geo.uzh.ch/microsite/reproducible_research/post/rr-eclipse-git/img/git-transport.png "Git Movement"
 <a name="creating-a-repo">
- 
+
  #### Creating a repo
 </a>
 
@@ -44,7 +44,7 @@ Initialized empty Git repository in home/here/be/dragons/.git/
 
 After `git init`, use the command `git remote add [remoteName] [url]`
 ```Bash
-$ git remote add origin 
+$ git remote add origin
 https://github.com/kingarthur/england
 $ git remote --verbose
 origin	https://github.com/kingarthur/england.git (fetch)
@@ -52,10 +52,10 @@ origin	https://github.com/kingarthur/england (push)
 ```
 <a name="staging-changes">
 
-#### Staging changes 
+#### Staging changes
 </a>
 
-Using the command `git add [directory/file.type]` you can add a files changes to the staging area. 
+Using the command `git add [directory/file.type]` you can add a files changes to the staging area.
 
 ```Bash
 $ git add kingarthur.py
@@ -73,7 +73,7 @@ rm 'excalibur.stone'
 #### Committing changes
 </a>
 
-Put on your big boy pants, we're about to commit! In order to move your changes from the index (AKA the staging area) to the local repository, use the command `git commit -m"[commit message]"` 
+Put on your big boy pants, we're about to commit! In order to move your changes from the index (AKA the staging area) to the local repository, use the command `git commit -m"[commit message]"`
 
 ```Bash
 $ git commit -m"removed excalibur"
@@ -172,15 +172,15 @@ This is a very simple issue to fix as long as you haven't made any new commits y
 
 ```
 develop   B --  C  --  D
-         /             *\* 
+         /             *\*
 master  A -- A1 -- A2 -- E
 ```
 Where the asterisk mark the accidental merge commit. In order to fix this issue, simply use `git reset --hard HEAD~`. Your git history will revert, and looks like this.
 
 ```
 develop   B -- C -- D
-         /              
-master  A -- A1 -- A2 
+         /
+master  A -- A1 -- A2
 ```
 
 
@@ -203,7 +203,6 @@ As the diagram shows, `feature` and `develop` are in the same state "H" they wer
 
 Okay, so we understand the problem. In order to unfuck your git repo, your best option is to either:
 
-If 
 1. Resetting HEAD, checking out develop, and committing
 
 ```BASH
