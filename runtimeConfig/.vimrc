@@ -18,6 +18,8 @@ au BufNewFile,BufRead *.js,*.html,*.css
       \ set softtabstop=2 |
       \ set shiftwidth=2
 
+au BufNewFile *.cpp 0r ~/mattoc/runtimeConfig/cpp.skel
+
 set expandtab
 
 set statusline=%t       "tail of the filename
@@ -86,3 +88,11 @@ autocmd bufnewfile,bufread *.c
         \ set cindent
 let g:ale_set_highlights = 0
 
+
+" vim-header plugin
+
+let g:header_field_filename = 1
+let g:header_field_author = 'Matthew Coming'
+let g:header_field_timestamp = 1
+let g:header_field_modified_by = 0
+let g:header_auto_add_header = 0

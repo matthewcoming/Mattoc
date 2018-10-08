@@ -150,7 +150,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Fix for "context mismatch in svga_sampler_view_destroy" 
+# Fix for "context mismatch in svga_sampler_view_destroy"
 
 export SVGA_VGPU10=0
 
@@ -158,3 +158,5 @@ export HISTTIMEFORMAT="%F %T: "
 
 # added by Anaconda3 installer
 export PATH="/home/matt/anaconda3/bin:$PATH"
+
+complete -f -X '*.@(pdf|png|jpg|jpeg|gif|eps|dvi|pdf|ps|svg|nc|o)' -o plusdirs vim
