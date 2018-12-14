@@ -1,36 +1,36 @@
-
-let angle = 0;
-let w = 24;
-let ma;
-let maxD;
-
+// Dont fuck with
+let inner;
+let i;
 function setup() {
-  createCanvas(600, 600, WEBGL);
-  ma = atan(cos(QUARTER_PI));
-  maxD = dist(0, 0, 200, 200);
+  createCanvas(windowWidth, windowHeight, WEBGL);
 }
 
 function draw() {
-  background(100);
-  ortho(-400, 400, 400, -400, 0, 1000);
-  rotateX(-ma);
-  rotateY(-QUARTER_PI);
-
-  for (let z = 0; z < height; z += w) {
-    for (let x = 0; x < width; x += w) {
-      push();
-      let d = dist(x, z, width / 2, height / 2);
-      let offset = map(d, 0, maxD, -PI/2, PI/2);
-      let a = angle + offset;
-      let h = floor(map(sin(a), -1, 1, 100, 300));
-      translate(x - width / 2, 0, z - height / 2);
-      normalMaterial();
-      box(w, h, w);
-      // rect(x - width / 2 + w / 2, 0, w - 2, h);
-      pop();
+  background(30, 60, 100);
+  rotateX(HALF_PI*1.3);
+  frameRate(60);
+  loops = [];
+  maximum = 11; // number of loops, greater than 11 will overlap
+  if (loops.length < maximum) {
+    for (i = 1; i < maximum; i++) {
+        create(loops.length);
     }
   }
+}
 
-  angle -= 0.1;
+function Bubble(x) {
+  inner = 200*sin((frameCount - 31*x)* .01);
+  push();
+  translate(0, 0, 110*sin((frameCount - 31*x)* 0.02) );
+  fill(0,abs(180*sin((frameCount - 31*x)* 0.005)), abs(155*cos((frameCount - 31*x)* 0.005)));
+  torus(inner, 16);
+  // ellipseMode(CENTER);
+  // ellipse(0, 0, inner*2, inner*2);
+  balls = 3;
+  pop();
+}
+
+function create(input) {
+  loops.push(new Bubble(input));
 }
 
