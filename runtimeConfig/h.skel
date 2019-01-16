@@ -11,8 +11,11 @@
  * e-mail: coming.matthew@gmail.com
  *
  ******************************************************************************/
-using namespace std;
+#ifndef
+#define
 
-int main(int argc, char * argv[]) {
+#include <string>
 
-}
+class
+
+#endif
