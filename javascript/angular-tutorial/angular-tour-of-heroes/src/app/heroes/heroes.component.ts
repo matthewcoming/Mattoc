@@ -9,7 +9,7 @@ import { HeroService } from '../hero.service';
 })
 export class HeroesComponent implements OnInit {
 
-  heroed: Hero[];
+  heroes: Hero[];
 
   selectedHero: Hero;
 
