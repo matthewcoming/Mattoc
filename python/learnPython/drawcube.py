@@ -1,6 +1,6 @@
 def drawcube(n):
     try:
-        int(n)
+        n
     except ValueError:
         print('input must be an integer')
     if n % 2 == 1:
@@ -12,7 +12,7 @@ def drawcube(n):
 
     print('+{0}+'.format(frontLine))
 
-    for i in range(n/2):
+    for i in range(n//2):
         tempSpace = ''.join([' ' for _ in range(i)])
         print('|{0}\\{1}\\'.format(tempSpace, frontSpace))
 
@@ -20,15 +20,15 @@ def drawcube(n):
 
     print('|{0}+{1}+'.format(tempSpace, frontLine))
 
-    for i in range((n/2) - 1):
+    for i in range((n//2) - 1):
         print('|{0}|{1}|'.format(tempSpace, frontSpace))
 
     print('+{0}|{1}|'.format(tempSpace, frontSpace))
 
     startSpace = ' '
-    endSpace = ''.join([' ' for _ in range((n/2) - 1)])
+    endSpace = ''.join([' ' for _ in range((n//2) - 1)])
 
-    for i in range(n/2):
+    for i in range(n//2):
         print('{0}\\{1}|{2}|'.format(startSpace, endSpace, frontSpace))
 
         startSpace += ' '
@@ -42,4 +42,6 @@ def drawcube(n):
     print('{0}+{1}+'.format(startSpace, frontLine))
 
 
+drawcube(4)
+drawcube(8)
 drawcube(16)
