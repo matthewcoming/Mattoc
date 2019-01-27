@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-# a pandas dataframe created with a dict
 
+# a pandas dataframe created with a dict
 dictFrame = pd.DataFrame({
         'AAA': pd.Series(1, index=list(range(4)), dtype='int32'),
         'BBB': np.array([3] * 4, dtype='int32'),
@@ -12,8 +12,6 @@ dictFrame = pd.DataFrame({
         ['first', 'second', 'third', 'fourth'])
 
 print(dictFrame.to_string())
-print()
-print()
 
 spacedNum = np.linspace(0.0, 2*np.pi, num=100, endpoint=True)
 spacedOne = np.linspace(-1.0, 1.0, num=100, endpoint=True)
