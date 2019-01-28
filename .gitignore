@@ -1,4 +1,4 @@
 __pycache__
-resume/*.out
-resume/*.log
-resume/*.aux
+resume/*/*.out
+resume/*/*.log
+resume/*/*.aux
