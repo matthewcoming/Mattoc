@@ -201,7 +201,7 @@ With your new found `git merge` powers, you attempt to send your changes "upstre
 
 As the diagram shows, `feature` and `develop` are in the same state "H" they were before your typo fixing commit "I". Also, both of these branches are now *parents* of `master`. The branches are up-to-date with master because all previous changes made in the branches are present in master.
 
-Okay, so we understand the problem. In order to unfuck your git repo, your best option is to either:
+Okay, so we understand the problem. In order to fix your git repo, your best option is to either:
 
 1. Resetting HEAD, checking out develop, and committing
 
