@@ -2,3 +2,4 @@ __pycache__
 resume/*/*.out
 resume/*/*.log
 resume/*/*.aux
+node_modules/

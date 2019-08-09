@@ -15,7 +15,7 @@ var cookieParser = require('cookie-parser');
 
 var client_id = '0c99999515f74a0980c7959ddb77ce66'; // Your client id
 var client_secret = ''; //  I have removed the client secret so you can't read it.
-var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
+var redirect_uri = 'http://kipja.com/'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
