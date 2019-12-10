@@ -1,0 +1,181 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeEducationHeader}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+        \textit{\small#5} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeAward}[2]{
+  \vspace{-1pt}
+    \item\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-20pt}
+}
+
+\newcommand{\resumeJobDesc}[1]{
+  \item\small{{ #1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Matthew Coming} & www.matthewcoming.com \\
+  College Station, Texas & Email : coming.matthew@gmail.com\\
+  & Mobile : +1 (979) 240-1776 \\
+  
+\end{tabular*}
+\vspace{-10pt}
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeEducationHeader
+      {Texas A\&M, College of Engineering}{College Station, Texas}
+      {Bachelor of Science in Computer Science;  GPA: 3.7}{Aug. 2017 -- Present}
+      {Minor in Cybersecurity; expected graduation Spring 2021}
+  \resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+     \begin{itemize}[leftmargin=*]
+             \item\textbf{Languages}: C++, C{\nolinebreak[4]\raisebox{.6ex}{\#}}, JavaScript, Java, Bash
+                     \vspace{-7pt}
+             \item\textbf{Software}: Docker, VMWare, VirtualBox
+                     \vspace{-7pt}
+             \item\textbf{Collaboration}: Git, Jira, Confluence, Agile Software Development
+                     \vspace{-7pt}
+             \item\textbf{IDEs}: VIM, Eclipse, Intellij IDEA, Visual Studio, XCode, Jupyter notebook
+                     \vspace{-7pt}
+             \item\textbf{Operating Systems and Technologies}: Ubuntu, CentOS, Kali, AWS
+     \end{itemize}
+
+%-----------EXPERIENCE-----------------
+\section{Employment History}
+  \resumeSubHeadingListStart
+    
+    \resumeSubheading
+    {L3Harris Technologies}{Greenville, Texas}
+    {Co--op Engineer}{June 2019 -- Present}
+      
+      \resumeItemListStart
+        \resumeJobDesc{Member of a team responsible for maintaning, refactoring, developing, and documenting software for internal research and development of intelligence and reconaissance systems.}
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {Hakota Design}{Dallas, Texas}
+      {Intern}{May 2018 -- Aug 2018}
+
+     \resumeItemListStart
+        \resumeItem{RST, \LaTeX, Markdown}
+          {Created professional business artifacts with Latex, software spec. sheets in markdown, and self-documentation for python with RST.}
+        \resumeItem{Git}
+          {Learned the Git-Flow work flow to build a portfolio on GitHub.}
+        \resumeItem{Preciate Quality Assurance}
+          {Tested and documented the Preciate app's android and SMS user experience.}
+        \resumeItem{UML}
+          {Created use-case and sequence diagrams using open-source PlantUML.}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects and Interests}
+\begin{itemize}[leftmargin=*]
+                  \resumeItem{AWS}{Experimenting with different Amazon Web Services for small projects. Hosting matthewcoming.com using S3, Cloudfront, and Route 53. Created a small Elastic Beanstalk hosted calulator using API Gateway and Lambda.i}
+                  \vspace{-5pt}
+                  \resumeItem{Cryptography and Security}{Reverse engineering, security penetration testing, Blockchain technologies, and secure programming practices.}
+\end{itemize}
+
+%-----------ORGANIZATIONS-----------------
+\section{Organizations and Clubs}
+\resumeSubHeadingListStart
+        \resumeAward{TAMU CyberSecurity Club - Member}{Aug 2018 - May 2019}
+        \resumeAward{TAMU BUILD - Student Supervisor}{Aug 2018 - May 2019}
+        \vspace{3pt}
+        \resumeItemListStart
+                \resumeJobDesc{BUILD is a student run organization at Texas A\&M University that transforms shipping containers into medical clinics and classrooms that are sent all around the world. The role of a Student Supervisor is to guide the work and oversee the safety of the hundreds of volunteers each semester.}
+        \resumeItemListEnd
+\resumeSubHeadingListEnd
+%\vspace{3pt}
+
+%-----------AWARDS-----------------
+\section{Honors and Certification}
+  \resumeSubHeadingListStart
+    \resumeAward{Texas A\&M University Dean's Honor Award}{Dec 2018, Dec 2017}
+    \resumeAward{Texas A\&M University Distinguished Student Award}{May 2018}
+    \resumeAward{Red Cross First Aid/CPR/AED Certification}{June 2017}
+\resumeSubHeadingListEnd
+\vspace{5pt}
+
+%----------------------------------
+\end{document}
