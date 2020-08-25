@@ -1,0 +1,23 @@
+@startuml
+object Player
+
+Player : Primary Key (pla_name,pla_team,pla_number)
+Player : pla_name : string
+Player : pla_position : position
+Player : pla_number : int
+Player : pla_team : FK
+Player : pla_statistics : FK
+
+
+object Team
+Team : Primary Key (team_name)
+Team : team_name : string
+Team : team_wins : int
+Team : team_losses : int
+Team : team_ties : int
+Team : team_conference : FK
+Team : team_division : FK
+
+
+Team  <-- "pla_team" Player : " team_name"
+@enduml
