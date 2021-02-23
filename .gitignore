@@ -2,4 +2,5 @@ __pycache__
 resume/*/*.out
 resume/*/*.log
 resume/*/*.aux
+resume/*/*.synctex.gz
 node_modules/

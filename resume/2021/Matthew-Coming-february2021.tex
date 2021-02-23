@@ -1,0 +1,180 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+
+\newcommand{\csharp}{C{\nolinebreak[4]\raisebox{.6ex}{\#}}}
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeEducationHeader}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+        \textit{\small#5} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeAward}[2]{
+  \vspace{-1pt}
+    \item\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-20pt}
+}
+
+\newcommand{\resumeJobDesc}[1]{
+  \item\small{{ #1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Matthew Coming} 	& MatthewComing.com \\
+  Dallas, Texas 					& MatthewComing@gmail.com\\
+  							& +1 (979) 240-1776 \\
+  
+\end{tabular*}
+\vspace{-10pt}
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeEducationHeader
+      {Texas A\&M, College of Engineering}{College Station, Texas}
+      {Bachelor of Science in Computer Science;  GPA: 3.7}{Aug 2017 -- Present}
+      {Minor in CyberSecurity; Graduating May 2021}
+  \resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+     \begin{itemize}[leftmargin=*]
+             \item\textbf{Languages}: C++, \csharp, JavaScript, Java, Bash
+                     \vspace{-7pt}
+             \item\textbf{Software}: Docker, VMWare, VirtualBox, ffmpeg
+                     \vspace{-7pt}
+             \item\textbf{Collaboration}: Git, Jira, Confluence, Agile Software Development
+                     \vspace{-7pt}
+             \item\textbf{IDEs}: Vim, Visual Studio, XCode, Jupyter Notebook
+                     \vspace{-7pt}
+             \item\textbf{Operating Systems and Technologies}: Linux, Cloudfront, Elastic Beanstalk, S3, Route 53
+     \end{itemize}
+
+%-----------EXPERIENCE-----------------
+\section{Employment History}
+  \resumeSubHeadingListStart
+    
+    \resumeSubheading
+    {L3Harris Technologies}{Mission Integration Division, Greenville, Texas}
+    {Co--op Software Engineer [Active Secret Clearance]}{11 Months}
+      
+      \resumeItemListStart
+        \resumeJobDesc{Member of a team responsible for maintaining, refactoring, developing, and documenting software for the internal research and development of intelligence and reconnaissance systems, namely mission management software.}
+        \resumeItem{JavaScript and React}
+          {Designed and wrote ReactJS UI components that communicated with a backend message bus through Google Protobuf messages.}
+        \resumeItem{\csharp{ }and WinForms}
+          {Designed and wrote application code to expand the capabilities of L3Harris ViewPoint.}
+        \resumeItem{Security}
+          {Used Fortify static code analysis to triage and fix security defects in a legacy code base.}
+        \resumeItem{GIS}
+          {Worked extensively with CesiumJS, an open source JavaScript library for creating 3D globes and maps, and ESRI ArcMap.}
+      \resumeItemListEnd
+      \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects and Interests}
+\begin{itemize}[leftmargin=*]
+                  \resumeItem{Real-time Computer Vision}{Using ffmpeg and OpenCV to find and dynamically crop faces from streamed video.}
+                  \vspace{-5pt}
+                  \resumeItem{OpenGL, ThreeJS}{Pursuing the creation of algorithmic art by creating interesting animation or photos based off of real world data inputs.}
+                  \vspace{-5pt}
+                  \resumeItem{AWS}{Experimenting with different Amazon Web Services for small projects. Hosting MatthewComing.com using S3, Cloudfront, and Route 53. Created a small Elastic Beanstalk hosted calculator using API Gateway and Lambda.}
+                  \vspace{-5pt}
+\end{itemize}
+
+%-----------ORGANIZATIONS-----------------
+\section{Organizations and Clubs}
+\resumeSubHeadingListStart
+        \resumeAward{TAMU AutoDrive Challenge Team - Member}{Spring 2021}
+         \vspace{0pt}
+        \resumeItemListStart
+                \resumeJobDesc{Real-time HD Map Verification -- Using the Robot Operating System(ROS) and rqt, a C++ qt-based framework for GUI development, this team created a system that allows a user to verify the correctness of a high definition map during the maneuvering of a self-driving car. }
+        \resumeItemListEnd
+        \resumeAward{TAMU CyberSecurity Club - Member}{Fall 2018, Spring 2019}
+        \resumeAward{TAMU BUILD - Student Supervisor}{Fall 2018, Spring 2019}
+        \vspace{0pt} % IKD MAN i guess this has to be here
+        \resumeItemListStart
+                \resumeJobDesc{BUILD is a student run organization at Texas A\&M University that transforms shipping containers into medical clinics and classrooms that are sent all around the world. The role of a Student Supervisor is to guide the work and oversee the safety of the hundreds of volunteers each semester.}
+        \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------AWARDS-----------------
+\section{Honors and Certification}
+  \resumeSubHeadingListStart
+    \resumeAward{Texas A\&M University Dean's Honor Award}{Fall 2017 / Fall 2018 / Spring 2020}
+    \resumeAward{Texas A\&M University Distinguished Student Award}{Spring 2018 / Spring 2019}
+\resumeSubHeadingListEnd
+%----------------------------------
+\end{document}
