@@ -93,32 +93,32 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Matthew Coming NOT FOR PUBLIC NOT FOR PUBLIC} 	& MatthewComing.com \\
-  Dallas, Texas 					& MatthewComing@gmail.com\\
-  							& +1 (979) 240-1776 \\
-  
+  \textbf{\Large Matthew Coming}& MatthewComing.com \\
+  Austin, Texas 	        & MatthewComing@gmail.com\\
+  			        & +1 (979) 240-1776 \\
 \end{tabular*}
 \vspace{-10pt}
 %-----------EDUCATION-----------------
 \section{Education}
     \resumeEducationHeader
       {Texas A\&M, College of Engineering}{College Station, Texas}
-      {Bachelor of Science in Computer Science;  GPA: 3.7}{Aug 2017 -- Present}
-      {Minor in CyberSecurity; Graduating May 2021}
-  
+      {Bachelor of Science in Computer Science;  GPA: 3.7}{Aug 2017 -- May 2021}
+      {Minor in CyberSecurity}
+
 %--------PROGRAMMING SKILLS------------
 \section{Skills}
      \begin{itemize}[leftmargin=*]
-             \item\textbf{Languages}: C++, \csharp, JavaScript, Java, Bash
+             \item\textbf{Languages}: Python, C++, Javascript, \csharp
                      \vspace{-7pt}
-             \item\textbf{Software}: Docker, VMWare, VirtualBox, ffmpeg
+             \item\textbf{Software}: Docker, VMWare, VirtualBox, OpenShift
                      \vspace{-7pt}
              \item\textbf{Collaboration}: Git, Jira, Confluence, Agile Software Development
                      \vspace{-7pt}
-             \item\textbf{IDEs}: Vim, Visual Studio, XCode, Jupyter Notebook
+             \item\textbf{IDEs}: Visual Studio, Apple XCode, Jupyter Notebook, Colab
                      \vspace{-7pt}
              \item\textbf{Operating Systems and Technologies}: Linux, Cloudfront, Elastic Beanstalk, S3, Route 53
-     \end{itemize}
+                      \vspace{-7pt}
+    \end{itemize}
 
 %-----------EXPERIENCE-----------------
 \section{Employment History}
@@ -126,20 +126,27 @@
     \resumeSubheading
     {Emergent Space Technologies}{Austin, Texas}
     {Software Engineer}{June 2021 -- Present}
-      
-      %\resumeItemListStart
-      %resumeItemListEnd
+ 
+      \resumeItemListStart
+        \resumeJobDesc{Built stateless microservices, deployed in a RedHat OpenShift environment, to aid Space Domain Awareness operations.}
+        \resumeItem{Microservice Design}
+        {Designed and implemented docker images, message serialization, deserialization, and validation to communicate across a pub/sub message bus.}
+        \resumeItem{GMAT}
+        {Automated orbit determination, propagation, and satellite visibility calculations using NASA GMAT.}
+        \resumeItem{Python}
+        {Made extensive use of python 3.7+ packaging, Metaclasses, custom annotations, multiple inheritance, and polymorphism. }
+      \resumeItemListEnd
 
     \resumeSubheading
     {L3Harris Technologies}{Mission Integration Division, Greenville, Texas}
     {Co--op Software Engineer}{3 terms, 11 Months}
-      
+
       \resumeItemListStart
-        \resumeJobDesc{Member of a team responsible for maintaining, refactoring, developing, and documenting software for the internal research and development of intelligence and reconnaissance systems, namely mission management software.}
+        \resumeJobDesc{Member of a team responsible for maintaining, refactoring, developing, and documenting software for the internal research and development of intelligence and reconnaissance systems, primarily mission management software.}
         \resumeItem{JavaScript and React}
           {Designed and wrote ReactJS UI components that communicated with a backend message bus through Google Protobuf messages.}
         \resumeItem{\csharp{ }and WinForms}
-          {Designed and wrote application code to expand the capabilities of L3Harris ViewPoint.}
+          {Designed and wrote application code to expand the capabilities of L3Harris ViewPoint HD.}
         \resumeItem{Security}
           {Used Fortify static code analysis to triage and fix security defects in a legacy code base.}
         \resumeItem{GIS}
@@ -150,8 +157,6 @@
 %-----------PROJECTS-----------------
 \section{Projects and Interests}
 \begin{itemize}[leftmargin=*]
-                  \resumeItem{Real-time Computer Vision}{Using ffmpeg and OpenCV to find and dynamically crop faces from streamed video.}
-                  \vspace{-5pt}
                   \resumeItem{OpenGL, ThreeJS}{Pursuing the creation of algorithmic art and animation in shader languages.}
                   \vspace{-5pt}
                   \resumeItem{AWS}{Experimenting with different Amazon Web Services for small projects. Hosting MatthewComing.com using S3, Cloudfront, and Route 53.}
@@ -170,7 +175,7 @@
         \resumeItemListEnd
         \resumeAward{TAMU CyberSecurity Club - Member}{Fall 2018, Spring 2019}
         \resumeAward{TAMU BUILD - Student Supervisor}{Fall 2018, Spring 2019}
-        \vspace{0pt} % IKD MAN i guess this has to be here
+        \vspace{0pt} % IDK MAN i guess this has to be here
         \resumeItemListStart
                 \resumeJobDesc{BUILD is a student run organization at Texas A\&M University that transforms shipping containers into medical clinics and classrooms that are sent all around the world. The role of a Student Supervisor is to guide the work and oversee the safety of the hundreds of volunteers each semester.}
         \resumeItemListEnd
