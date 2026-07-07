@@ -1,0 +1,227 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+
+\newcommand{\csharp}{C{\nolinebreak[4]\raisebox{.6ex}{\#}}}
+
+\newcommand{\resumeItemHeader}[1]{
+  \item\small{
+    \textbf{#1 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeLine}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeEducationHeader}[5]{
+  \vspace{-1pt}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+        \textit{\small#5} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeAward}[2]{
+  \vspace{-1pt}
+    \item\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-20pt}
+}
+
+\newcommand{\resumeJobDesc}[1]{
+  \item\small{{ #1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Matthew Coming}& MatthewComing.com \\
+  Austin, Texas 	        & coming.matthew@gmail.com\\
+  			        & +1 (979) 240-1776 \\
+\end{tabular*}
+\vspace{-10pt}
+%-----------EDUCATION-----------------
+\section{Education}
+    \resumeEducationHeader
+      {Texas A\&M, College of Engineering}{College Station, Texas}
+      {Bachelor of Science in Computer Science;  GPA: 3.7}{Aug 2017 -- May 2021}
+      {Minor in CyberSecurity}
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+  \begin{itemize}[leftmargin=*]
+    \item\textbf{Languages}: C, C++, \csharp, Python, Javascript, Bash
+      \vspace{-7pt}
+    \item\textbf{Software Specialties}: Docker, Gitlab CI/CD, OpenGL, React
+      \vspace{-7pt}
+    \item\textbf{Technologies}: Linux, Kafka, AWS S3, NASA GMAT
+      \vspace{-7pt}
+\end{itemize}
+
+%-----------EXPERIENCE-----------------
+\section{Employment History}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {York Space Systems}{Austin, Texas}
+    {Senior Software Engineer II}{August 2023 -- Present}
+      \resumeItemListStart
+        \resumeJobDesc{My role has been to design, build, and support software across the entire software organization to support the Proliferated Warfighter Space Architecture Traunch 1 and Traunch 2 launches, in addition to other missions.}
+        \resumeItemHeader{Ground Software (GSW)}
+        \resumeItemListStart
+          \resumeLine{Designed York's original GSW-integrated flight dynamics solver.}
+          \resumeLine{Led integration and test of York's GSW against the US Government's GSW.}
+          \resumeLine{Designed and led development of multiple internal testing tools to aid QA test development.}
+          \resumeLine{Created CI/CD pipelines across products to allow for continous testing, building, and semantic versioning internal dependency management.}
+        \resumeItemListEnd
+
+        \resumeItemHeader{Simulation, Integration, and Test}
+        \resumeItemListStart
+          \resumeLine{Designed York's GSW integration test environment, allowing for repeatable tests of the GSW against York's end-to-end vehicle simulation.}
+          \resumeLine{Productized and proliferated York's end-to-end vehicle simulation across the organization.}
+          \resumeLine{Packaged an offline runtime environment of the end-to-end vehicle simulation for work in secure spaces.}
+          \resumeLine{Manage a custom linux kernel for windows subsystem for linux (WSL) development, allowing for development not possible in WSL out of the box.}
+          \resumeLine{Designed and built a vehicle camera simulation for flight-like testing of video processing using OpenGL.}
+        \resumeItemListEnd
+
+      \resumeItemListEnd
+
+    \resumeSubheading
+    {Emergent Space Technologies}{Austin, Texas}
+    {Software Engineer}{June 2021 -- August 2023}
+ 
+      \resumeItemListStart
+        \resumeJobDesc{Built stateless microservices, deployed in a RedHat OpenShift environment, to aid Space Domain Awareness operations.}
+        \resumeItem{Microservice Design}
+        {Designed and implemented docker images, message serialization, deserialization, and validation to communicate across a pub/sub message bus.}
+        \resumeItem{GMAT}
+        {Automated orbit determination, propagation, and satellite visibility calculations using NASA GMAT.}
+        \resumeItem{Python}
+        {Made extensive use of python 3.7+ packaging, Metaclasses, custom annotations, multiple inheritance, and polymorphism. }
+      \resumeItemListEnd
+
+    \resumeSubheading
+    {L3Harris Technologies}{Mission Integration Division, Greenville, Texas}
+    {Co-op Software Engineer}{3 terms, 11 Months}
+
+      \resumeItemListStart
+        \resumeJobDesc{Member of a team responsible for maintaining, refactoring, developing, and documenting software for the internal research and development of intelligence and reconnaissance systems, primarily mission management software.}
+        \resumeItem{JavaScript and React}
+          {Designed and wrote ReactJS UI components that communicated with a backend message bus through Google Protobuf messages.}
+        \resumeItem{\csharp{ }and WinForms}
+          {Designed and wrote application code to expand the capabilities of L3Harris ViewPoint HD.}
+        \resumeItem{Security}
+          {Used Fortify static code analysis to triage and fix security defects in a legacy code base.}
+        \resumeItem{GIS}
+          {Worked extensively with CesiumJS, an open source JavaScript library for creating 3D globes and maps, and ESRI ArcMap.}
+      \resumeItemListEnd
+      \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects and Interests}
+\begin{itemize}[leftmargin=*]
+                  \resumeItem{Hobby Mechanic}{Working on restoring and upgrading a 2001 Porsche 911 inside and out.}
+                  \vspace{-5pt}
+                  \resumeItem{OpenGL, ThreeJS}{Pursuing the creation of algorithmic art and animation in shader languages.}
+                  \vspace{-5pt}
+                  \resumeItem{AWS}{Hosting MatthewComing.com using S3, Cloudfront, and Route 53.}
+                  \vspace{-5pt}
+                  \resumeItem{Relevant Coursework}{Software Engineering, Software Security, Computer Graphics, Operating Systems, Machine Learning, Artificial Intelligence}
+                  \vspace{-5pt}
+\end{itemize}
+
+%-----------ORGANIZATIONS-----------------
+\section{Organizations and Clubs}
+\resumeSubHeadingListStart
+        \resumeAward{TAMU AutoDrive Challenge Team - Member}{Spring 2021}
+        \vspace{0pt}
+        \resumeItemListStart
+                \resumeJobDesc{Real-time HD Map Verification -- Using the Robot Operating System(ROS), React, CesiumJS, and Electron, this team created a system that allows a user to verify the correctness of a high definition map during the maneuvering of a self-driving car. }
+        \resumeItemListEnd
+        \resumeAward{TAMU CyberSecurity Club - Member}{Fall 2018, Spring 2019}
+        \resumeAward{TAMU BUILD - Student Supervisor}{Fall 2018, Spring 2019}
+        \vspace{0pt} % IDK MAN i guess this has to be here
+        \resumeItemListStart
+                \resumeJobDesc{BUILD is a student run organization at Texas A\&M University that transforms shipping containers into medical clinics and classrooms that are sent all around the world. The role of a Student Supervisor is to guide the work and oversee the safety of the hundreds of volunteers each semester.}
+        \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------AWARDS-----------------
+\section{Honors and Certification}
+  \resumeSubHeadingListStart
+    \resumeAward{2x York Space Systems Company Recognition Award}{}
+    \resumeAward{2x Emergent Space Technologies Company Recognition Award}{}
+    \resumeAward{Texas A\&M University Distinguished Student Award}{Spring 2018, Spring 2019}
+    \resumeAward{Texas A\&M University Dean's Honor Award}{Fall 2017, Fall 2018, Spring 2020}
+\resumeSubHeadingListEnd
+%----------------------------------
+\end{document}
